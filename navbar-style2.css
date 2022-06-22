@@ -8,12 +8,13 @@
 
 nav {
     display: flex;
-    width: 100%;
+    flex: row wrap;
     background-color: rgb(29, 34, 41);
-    /* position: relative; */
     justify-content: space-between;
-    text-align: center;
     padding: 15px 30px;
+    max-height: 70px;
+    max-width: 100%;
+    align-items: center;
 }
 
 nav .icon {
@@ -23,15 +24,20 @@ nav .icon {
     cursor: pointer;
 }
 
+
 nav ol {
     display: flex;
     list-style: none;
     margin: auto 0;
+
+}
+
+.sub {
+    font-weight: 300;
 }
 
 nav ol li {
     margin: 0 2px;
-
 }
 
 nav ol li a {
@@ -45,7 +51,11 @@ nav ol li a {
 
 nav ol li:hover a {
     background-color: transparent;
-    color: green;
+}
+
+nav ol li .sub {
+    color: #fff;
+    font-size: medium;
 }
 
 nav .search-box {
@@ -86,7 +96,6 @@ nav .disabled {
 .dropdown1 {
     position: relative;
     display: inline-block;
-
 }
 
 .dropdown {
@@ -99,6 +108,29 @@ nav .disabled {
     display: block;
     background-color: rgb(66, 71, 78);
     width: 150px;
+    height: 80px;
     border-radius: 10px;
-    color: rgb(238, 9, 135);
+    text-align: center;
+
+}
+
+.hmbrgr {
+    font-size: 2em;
+    padding-right: 20px;
+    color: white;
+}
+
+@media (max-width:768px) {
+
+    li:not(:first-child),
+    .search,
+    .search-btn {
+        display: none;
+    }
+}
+
+@media (min-width:769px) {
+    .hmbrgr {
+        display: none;
+    }
 }
