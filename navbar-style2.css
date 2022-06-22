@@ -122,9 +122,9 @@ nav .disabled {
 
 @media (max-width:768px) {
 
-    li:not(:first-child),
-    .search,
-    .search-btn {
+    ol:not(:first-child),
+    .search-box,
+    .search-btn, .icon {
         display: none;
     }
 }
